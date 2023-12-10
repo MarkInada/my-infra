@@ -1,0 +1,21 @@
+[
+  {
+    "name": "minada-test",
+    "image": "935213417717.dkr.ecr.ap-northeast-1.amazonaws.com/workshop:latest",
+    "cpu": 10,
+    "memory": 256,
+    "essential": true,
+    "portMappings": [
+      {
+        "containerPort": 80
+      }
+    ],
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-group": "/ecs/frontend-container",
+        "awslogs-region": "ap-northeast-1"
+      }
+    }
+  }
+]
